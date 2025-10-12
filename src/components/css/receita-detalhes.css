@@ -144,7 +144,7 @@
 }
 
 .receita-not-found button {
-  background: #9B5DE5;
+  background: rgb(216, 113, 65);
   color: white;
   border: none;
   padding: 0.75rem 1.5rem;
@@ -162,28 +162,28 @@
 }
 
 .tag.rosa {
-  background: #F8BBDA;
-  color: #6C1E40;
+  background: #ffc787;
+  color: rgb(216, 113, 65);
 }
 
 .tag.verde {
-  background: #C8E6C9;
-  color: #2E7D32;
+  background: #ffc787;
+  color: rgb(216, 113, 65);
 }
 
 .tag.lilas {
-  background: #E1BEE7;
-  color: #7B1FA2;
+  background: #ffc787;
+  color: rgb(216, 113, 65);
 }
 
 .tag.lavanda {
-  background: #D1C4E9;
-  color: #512DA8;
+  background: #ffc787;
+  color: rgb(216, 113, 65);
 }
 
 .tag.roxo {
-  background: #B39DDB;
-  color: #4527A0;
+  background: #ffc787;
+  color: rgb(216, 113, 65);
 }
 
 @media (max-width: 768px) {

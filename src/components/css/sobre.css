@@ -15,12 +15,12 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 20px 40px;
-  background-color: #FFFFFF;
+  background-color: #ffc787;
   border-bottom: 1px solid #eee;
 }
 
 header h1 {
-  color: #9B5DE5;
+  color: rgb(216, 113, 65);
   font-size: 24px;
 }
 section{
@@ -35,7 +35,7 @@ nav a {
 }
 
 nav a.active {
-  color: #9B5DE5;
+  color: rgb(216, 113, 65);
 }
 
 .sobre-container {
@@ -51,7 +51,7 @@ nav a.active {
 }
 
 .titulo-secao h1 {
-  color: #9B5DE5;
+  color: rgb(216, 113, 65);
   font-size: 36px;
   margin-bottom: 15px;
 }
@@ -89,7 +89,7 @@ nav a.active {
 }
 
 .missao-texto h2 {
-  color: #9B5DE5;
+  color: rgb(216, 113, 65);
   font-size: 28px;
   margin-bottom: 20px;
 }
@@ -110,12 +110,12 @@ nav a.active {
 }
 
 .valor-card {
-  background: #E1D5F5;
+  background: #ffc787;
   border-radius: 15px;
   padding: 30px 20px;
   text-align: center;
   width: 280px;
-  box-shadow: 0 4px 15px rgba(155, 93, 229, 0.1);
+  box-shadow: 0 4px 15px rgba(216, 113, 65, 0.1);
   transition: transform 0.3s ease;
 }
 
@@ -129,7 +129,7 @@ nav a.active {
 }
 
 .valor-card h3 {
-  color: #9B5DE5;
+  color: rgb(216, 113, 65);
   font-size: 20px;
   margin-bottom: 15px;
 }
@@ -148,7 +148,7 @@ nav a.active {
 }
 
 .historia-secao h2 {
-  color: #9B5DE5;
+  color: rgb(216, 113, 65);
   font-size: 28px;
   margin-bottom: 25px;
 }
@@ -162,7 +162,7 @@ nav a.active {
 
 .assinatura {
   font-style: italic;
-  color: #9B5DE5;
+  color: rgb(216, 113, 65);
   font-weight: 500;
   margin-top: 30px;
 }
@@ -174,14 +174,14 @@ nav a.active {
 }
 
 .app-aviso {
-  background: linear-gradient(135deg, #d280eb);
+  background: linear-gradient(135deg, rgb(255, 144, 92));
   border-radius: 20px;
   padding: 40px;
   display: flex;
   align-items: center;
   gap: 30px;
   color: white;
-  box-shadow: 0 8px 25px rgba(155, 93, 229, 0.3);
+  box-shadow: 0 8px 25px rgba(216, 113, 65, 0.3);
 }
 
 .app-icone {

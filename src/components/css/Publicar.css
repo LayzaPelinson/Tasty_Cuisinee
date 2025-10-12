@@ -21,11 +21,11 @@ header {
 }
 
 .menu li a:hover {
-  color: #9B5DE5;
+  color: rgb(216, 113, 65);
 }
 
 .menu li a.active {
-  color: #9B5DE5;
+  color: rgb(216, 113, 65);
 }
 
 main {
@@ -96,5 +96,5 @@ button {
 }
 
 button:hover {
-  background-color: #7C3AED;
+  background-color: #ffac4d;
 }

@@ -9,7 +9,7 @@
 
 main{
   width: 100%;
-  height: 100vh;
+  height: 120vh;
 }
 body {
   background-color: #FFFFFF;
@@ -52,11 +52,11 @@ nav ul {
 }
 
 .menu li a:hover {
-  color: #9B5DE5;
+  color: rgb(216, 113, 65);
 }
 
 .menu li a.active {
-  color: #9B5DE5;
+  color: rgb(216, 113, 65);
 }
 
 /* Container principal */
@@ -76,7 +76,7 @@ nav ul {
 
 .titulo-destaque {
   font-size: 2rem;
-  color: var(--accent-lilac);
+  color: rgb(216, 113, 65);
   margin-bottom: 0.5rem;
 }
 
@@ -113,7 +113,7 @@ nav ul {
 
 .dica-card h2 {
   font-size: 1.2rem;
-  color: var(--accent-lilac);
+  color: rgb(216, 113, 65);
   margin-bottom: 0.5rem;
 }
 
@@ -123,7 +123,7 @@ nav ul {
 }
 
 .botao-dica {
-  background: var(--accent-lilac);
+  background: rgb(216, 113, 65);
   color: white;
   border: none;
   padding: 0.6rem 1.2rem;
@@ -136,26 +136,26 @@ nav ul {
 }
 
 .botao-dica:hover {
-  background: var(--accent-pink);
+  background: rgb(255, 144, 92);
   transform: translateY(-2px);
-  box-shadow: 0 4px 8px rgba(156, 39, 176, 0.3);
+  box-shadow: 0 4px 8px rgba(216, 113, 65, 0.3);
 }
 
 /* Cores dos cards */
 .rosa {
-  background-color: var(--accent-pink);
+  background-color: #ffc787;
 }
 
 .lavanda {
-  background-color: var(--lavanda);
+  background-color: #ffc787;
 }
 
 .verde {
-  background-color: var(--accent-mint);
+  background-color: #ffc787;
 }
 
 .lilas {
-  background-color: var(--lilas-claro);
+  background-color: #ffc787;
 }
 
 /* Seção Consulta */
@@ -167,7 +167,7 @@ nav ul {
 
 .consulta-section h2 {
   font-size: 32px;
-  color: #9B5DE5;
+  color: rgb(216, 113, 65);
   margin-bottom: 40px;
 }
 
@@ -181,8 +181,8 @@ nav ul {
 }
 
 .card {
-  background-color: #E1D5F5;
-  border: 2px solid #D7C2FF;
+  background-color: #ffc787;
+  border: 2px solid rgb(255, 144, 92);
   border-radius: 16px;
   padding: 20px;
   width: 280px;
@@ -201,7 +201,7 @@ nav ul {
 }
 
 .card h3 {
-  color: #9B5DE5;
+  color: rgb(216, 113, 65);
   font-size: 20px;
   margin-bottom: 10px;
 }
@@ -213,7 +213,7 @@ nav ul {
 
 .card a {
   color: #fff;
-  background-color: #9B5DE5;
+  background-color: rgb(216, 113, 65);
   padding: 8px 16px;
   border-radius: 8px;
   text-decoration: none;
@@ -240,7 +240,7 @@ main {
 
 /* Footer */
 footer {
-  background: #FEC8D8;
+  background: #ffc787;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -250,7 +250,7 @@ footer {
 }
 
 footer h3 {
-  color: #9B5DE5;
+  color: rgb(216, 113, 65);
 }
 
 .footer-links a {

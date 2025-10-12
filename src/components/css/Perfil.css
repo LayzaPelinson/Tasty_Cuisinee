@@ -65,7 +65,7 @@ header {
 }
 
 .preenchida {
-  background-color: #6c5ce7;
+  background-color: rgb(216, 113, 65);
   width: 75%;
   height: 100%;
   border-radius: 10px;
@@ -86,8 +86,8 @@ header {
 }
 
 .tag.verde {
-  background-color: #27ae60;
-  color: #fff;
+  background-color: #ffc787;
+  color: #333;
 }
 
 /* === Conteúdo do Perfil === */
@@ -115,7 +115,7 @@ header {
 }
 
 .aba.ativa {
-  background-color: #6c5ce7;
+  background-color: rgb(216, 113, 65);
   color: #fff;
 }
 
@@ -143,7 +143,7 @@ header {
 }
 
 .btn-roxo {
-  background-color: #6c5ce7;
+  background-color: rgb(216, 113, 65);
   color: white;
   padding: 10px 15px;
   border: none;
@@ -152,7 +152,7 @@ header {
 }
 
 .btn-roxo:hover {
-  background-color: #5a4bd1;
+  background-color: rgb(255, 144, 92);
 }
 
 /* === Rodapé === */
