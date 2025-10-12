@@ -75,6 +75,12 @@ function Header() {
             }
           }>Perfil</a></li>
 
+          <li className="options"><a className="item" onClick={
+            () => {
+              window.location.href = "/contato";
+            }
+          }>Contato</a></li>
+
         </ul>
       </nav>
     </header>

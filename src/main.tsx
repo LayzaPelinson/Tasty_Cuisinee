@@ -14,6 +14,7 @@ import VerDetalhes from './components/VerDetalhesR.tsx'
 import VPerfil from './components/Perfil copy.tsx'
 import BemEstar from './components/BemEstar.tsx'
 import GuiaGastronomico from './components/GuiaGastronomico.tsx'
+import Contato from './components/Contato.tsx'
 
 import 'bootstrap/dist/css/bootstrap.css'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
@@ -66,6 +67,10 @@ const router = createBrowserRouter([
 {
   path: '/guia-gastronomico',
   element: <GuiaGastronomico/>
+},
+{
+  path: '/contato',
+  element: <Contato/>
 }
 ]);
 
