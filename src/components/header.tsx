@@ -40,16 +40,29 @@ function Header() {
             }
           }>Receitas</a></li>
 
+
+
           <li className="options"><a className="item" onClick={
             () => {
               if (isLogged) {
-                window.location.href = "/restaurantes";
+                window.location.href = "/bem-estar";
               } else {
                 alert("Você precisa estar logado para acessar à página");
                 window.location.href = "/login";
               }
             }
-          }>Restaurantes</a></li>
+          }>Bem-Estar</a></li>
+
+          <li className="options"><a className="item" onClick={
+            () => {
+              if (isLogged) {
+                window.location.href = "/guia-gastronomico";
+              } else {
+                alert("Você precisa estar logado para acessar à página");
+                window.location.href = "/login";
+              }
+            }
+          }>Guia Gastronômico</a></li>
 
           <li className="options"><a className="item" onClick={
             () => {
