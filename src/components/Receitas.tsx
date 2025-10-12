@@ -1,22 +1,25 @@
-import React, { useMemo, useState } from 'react'
+import { useMemo, useState } from 'react'
 import { MOCK_RECIPES } from './data/recipes'
 import './css/Receitas.css'
 import Header from './header'
 
-const CATEGORIES = [
-  'Todos',
-  'Café da Manhã',
-  'Snacks',
-  'Marmitas Fit',
-  'Veganas',
-  'Detox',
-  'Low Carb',
-  'Sobremesas Saudáveis',
-]
+const CATEGORIES = ['Todos', 'Café da Manhã', 'Snacks', 'Marmitas Fit', 'Veganas', 'Detox', 'Low Carb', 'Sobremesas Saudáveis']
 
-const Receitas: React.FC = () => {
+const getCategoryClass = (category: string) => {
+  const classes: Record<string, string> = {
+    'Sobremesas Saudáveis': 'rosa',
+    'Café da Manhã': 'verde',
+    'Marmitas Fit': 'lilas',
+    'Veganas': 'lavanda',
+    'Detox': 'verde',
+    'Low Carb': 'lilas'
+  }
+  return classes[category] || 'roxo'
+}
+
+export default function Receitas() {
   const [busca, setBusca] = useState('')
-  const [categoria, setCategoria] = useState<string>('Todos')
+  const [categoria, setCategoria] = useState('Todos')
 
   const receitasFiltradas = useMemo(() => {
     return MOCK_RECIPES.filter(r => {
@@ -28,8 +31,7 @@ const Receitas: React.FC = () => {
 
   return (
     <main className="receitas-main">
-        <Header/>
-
+      <Header/>
       <section className="search-bar">
         <form className="search-form" onSubmit={e => e.preventDefault()}>
           <input
@@ -39,7 +41,7 @@ const Receitas: React.FC = () => {
             onChange={e => setBusca(e.target.value)}
           />
           <button type="submit" className="search-icon" aria-label="Buscar">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
               <circle cx="11" cy="11" r="8" stroke="currentColor" strokeWidth="2"/>
               <path d="m21 21-4.35-4.35" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
             </svg>
@@ -60,40 +62,23 @@ const Receitas: React.FC = () => {
       </div>
 
       <section className="grid-receitas">
-
         {receitasFiltradas.map(r => (
-          <article key={r.id} className="card-receita" role="article" aria-label={r.title}>
+          <article key={r.id} className="card-receita">
             <div className="imagem-receita">
               <img src={r.image} alt={r.title} />
             </div>
-            <span className={`tag ${
-              r.category === 'Sobremesas Saudáveis' ? 'rosa' :
-              r.category === 'Café da Manhã' ? 'verde' :
-              r.category === 'Marmitas Fit' ? 'lilas' :
-              r.category === 'Veganas' ? 'lavanda' :
-              r.category === 'Detox' ? 'verde' :
-              r.category === 'Low Carb' ? 'lilas' : 'roxo'
-            }`}>{r.category}</span>
+            <span className={`tag ${getCategoryClass(r.category)}`}>{r.category}</span>
             <h2 className='Card-Title'>{r.title}</h2>
             <div className="info-receita">
               <span>🕒 {r.time}</span>
               <span>⚙ {r.difficulty}</span>
-              <button onClick={() => {
-              alert("aaaa")
-
-              }} className='Favoritar'>
-
-                <svg id="svg" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-heart-fill" viewBox="0 0 16 16">
-  <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314"/>
-</svg> {r.likes}
-
+              <button className='Favoritar'>
+                <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                  <path fillRule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314"/>
+                </svg> {r.likes}
               </button>
-
-
             </div>
-  
-            <button className="ver-receita" onClick={() => window.location.href = (`/receitas/${r.id}`)}>Ver Receita</button>
-
+            <button className="ver-receita" onClick={() => window.location.href = `/receitas/${r.id}`}>Ver Receita</button>
           </article>
         ))}
         {receitasFiltradas.length === 0 && (
@@ -105,5 +90,3 @@ const Receitas: React.FC = () => {
     </main>
   )
 }
-
-export default Receitas

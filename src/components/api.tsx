@@ -1,31 +1,11 @@
-import axios from 'axios';
+import axios from 'axios'
 
-    const API_URL = 'http://localhost:8080/api/items'; // Replace with your actual API endpoint
+const API_URL = 'http://localhost:8080/api/items'
 
-    const getAllItems = () => {
-        return axios.get(API_URL);
-    };
-
-    const getItemById = (Cod_user) => {
-        return axios.get(`${API_URL}/${Cod_user}`);
-    };
-
-    const createItem = (data) => {
-        return axios.post(API_URL, data);
-    };
-
-    const updateItem = (id, data) => {
-        return axios.put(`${API_URL}/${id}`, data);
-    };
-
-    const deleteItem = (id) => {
-        return axios.delete(`${API_URL}/${id}`);
-    };
-
-    export default {
-        getAllItems,
-        getItemById,
-        createItem,
-        updateItem,
-        deleteItem,
-    };
+export default {
+  getAllItems: () => axios.get(API_URL),
+  getItemById: (codUser: string) => axios.get(`${API_URL}/${codUser}`),
+  createItem: (data: any) => axios.post(API_URL, data),
+  updateItem: (id: string, data: any) => axios.put(`${API_URL}/${id}`, data),
+  deleteItem: (id: string) => axios.delete(`${API_URL}/${id}`)
+}

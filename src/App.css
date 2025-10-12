@@ -1,3 +1,19 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  background-color: white !important;
+  margin: 0;
+  padding: 0;
+}
+
+#root {
+  background-color: white !important;
+}
+
 .Title {
   color: rgb(216, 113, 65);
   font-family: Georgia, "Times New Roman", Times, serif;

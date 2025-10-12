@@ -1,15 +1,30 @@
-import { useEffect, useState } from "react";
-import "./css/header.css";
-import React from "react";
+import { useEffect, useState } from "react"
+import "./css/header.css"
 
-function Header() {
-  const [isLogged, setIsLogged] = useState(false);
-  useEffect(() => {
-    const isLogged = localStorage.getItem("isLogged");
-    
-    setIsLogged(isLogged === "true");
-  }, []);
+export default function Header() {
+  const [isLogged, setIsLogged] = useState(false)
   
+  useEffect(() => {
+    setIsLogged(localStorage.getItem("isLogged") === "true")
+  }, [])
+  
+  const navigate = (path: string, requireAuth = true) => {
+    if (requireAuth && !isLogged) {
+      alert("Você precisa estar logado para acessar a página")
+      window.location.href = "/login"
+    } else {
+      window.location.href = path
+    }
+  }
+
+  const menuItems = [
+    { label: "Home", path: "/home" },
+    { label: "Receitas", path: "/receitas" },
+    { label: "Bem-Estar", path: "/bem-estar" },
+    { label: "Guia Gastronômico", path: "/guia-gastronomico" },
+    { label: "Perfil", path: "/perfil" },
+    { label: "Contato", path: "/contato", requireAuth: false }
+  ]
 
   return (
     <header>
@@ -18,73 +33,15 @@ function Header() {
       </div>
       <nav className="nav-bar">
         <ul>
-          <li className="options"><a className="item" onClick={
-            () => {
-              if (isLogged) {
-                window.location.href = "/home";
-              } else {
-                alert("Você precisa estar logado para acessar a Página");
-                window.location.href = "/login";
-              }
-            }
-          }
-          >Home</a></li>
-          <li className="options"><a className="item" onClick={
-            () => {
-              if (isLogged) {
-                window.location.href = "/receitas";
-              } else {
-                alert("Você precisa estar logado para acessar à página");
-                window.location.href = "/login";
-              }
-            }
-          }>Receitas</a></li>
-
-
-
-          <li className="options"><a className="item" onClick={
-            () => {
-              if (isLogged) {
-                window.location.href = "/bem-estar";
-              } else {
-                alert("Você precisa estar logado para acessar à página");
-                window.location.href = "/login";
-              }
-            }
-          }>Bem-Estar</a></li>
-
-          <li className="options"><a className="item" onClick={
-            () => {
-              if (isLogged) {
-                window.location.href = "/guia-gastronomico";
-              } else {
-                alert("Você precisa estar logado para acessar à página");
-                window.location.href = "/login";
-              }
-            }
-          }>Guia Gastronômico</a></li>
-
-          <li className="options"><a className="item" onClick={
-            () => {
-              if (isLogged) {
-                window.location.href = "/perfil";
-              } else {
-                alert("Você precisa estar logado para acessar à página");
-                window.location.href = "/login";
-              }
-            }
-          }>Perfil</a></li>
-
-          <li className="options"><a className="item" onClick={
-            () => {
-              window.location.href = "/contato";
-            }
-          }>Contato</a></li>
-
+          {menuItems.map(item => (
+            <li key={item.label} className="options">
+              <a className="item" onClick={() => navigate(item.path, item.requireAuth)}>
+                {item.label}
+              </a>
+            </li>
+          ))}
         </ul>
       </nav>
     </header>
-  );
+  )
 }
-
-export default Header;
