@@ -25,9 +25,10 @@ header {
 nav ul {
   list-style: none;
   display: flex;
-  gap: 70px;
+  gap: clamp(10px, 5vw, 70px);
   margin: 0;
   padding-right: 20px;
+  flex-wrap: wrap;
 }
 
 nav a {
@@ -50,6 +51,7 @@ nav a {
 html, body {
   margin: 0 !important;
   padding: 0 !important;
+  overflow-x: hidden !important;
 }
 
 body {

@@ -136,9 +136,10 @@ nav ul {
   margin-top: 0.8rem;
   text-decoration: none;
   display: inline-block;
+  outline: none;
 }
 
-.botao-dica:hover {
+.botao-dica:hover:not(:disabled) {
   background: rgb(255, 144, 92);
   transform: translateY(-2px);
   box-shadow: 0 4px 8px rgba(216, 113, 65, 0.3);
@@ -215,13 +216,25 @@ nav ul {
 }
 
 .card a {
-  color: #fff;
-  background-color: rgb(216, 113, 65);
-  padding: 8px 16px;
-  border-radius: 8px;
+  background: rgb(216, 113, 65);
+  color: white;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+  margin-top: 0.8rem;
   text-decoration: none;
   display: inline-block;
-  font-size: 14px;
+  outline: none;
+}
+
+.card a:hover {
+  background: rgb(255, 144, 92);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(216, 113, 65, 0.3);
 }
 
 /* Layout responsivo */
@@ -328,12 +341,14 @@ footer h3 {
 .botao-dica:disabled {
   background: #ccc;
   cursor: not-allowed;
+  color: #666;
 }
 
 .botao-dica:disabled:hover {
   background: #ccc;
   transform: none;
   box-shadow: none;
+  color: #666;
 }
 
 /* Responsividade */
