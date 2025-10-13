@@ -7,12 +7,14 @@ header {
   align-items: center;
   padding: 20px 40px;
   background: #ffc787;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
   transition: transform 0.3s ease-in-out;
-  z-index: 1000;
+  z-index: 9999 !important;
+  box-sizing: border-box;
+  height: 80px;
 }
 
 .Title {
@@ -45,7 +47,17 @@ nav a {
   width: 80px;
 }
 
+html, body {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
 body {
-  margin: 0;
-  padding-top: 100px; 
+  padding-top: 100px !important;
+}
+
+/* Ensure all main containers have proper spacing */
+main, .full-page, .receitas-main, .bem-estar-container, .sobre-container, .perfil-container {
+  margin-top: 0 !important;
+  padding-top: 120px !important;
 }

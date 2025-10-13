@@ -10,22 +10,13 @@ body {
   color: #333;
 }
 
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px 40px;
-  background-color: #ffc787;
-  border-bottom: 1px solid #eee;
-}
+
 
 header h1 {
   color: rgb(216, 113, 65);
   font-size: 24px;
 }
-section{
-  margin-top: 80px;
-}
+
 
 nav a {
   margin-left: 20px;
@@ -42,6 +33,7 @@ nav a.active {
   padding: 40px 20px;
   max-width: 1200px;
   margin: 0 auto;
+  padding-top: 120px;
 }
 
 /* Título centralizado */

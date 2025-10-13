@@ -62,6 +62,7 @@ nav ul {
 /* Container principal */
 .bem-estar-container {
   padding: 2rem 1rem;
+  padding-top: 120px;
 }
 
 /* Seção Dicas Saudáveis */
@@ -133,6 +134,8 @@ nav ul {
   font-size: 0.9rem;
   transition: all 0.3s ease;
   margin-top: 0.8rem;
+  text-decoration: none;
+  display: inline-block;
 }
 
 .botao-dica:hover {
@@ -265,6 +268,74 @@ footer h3 {
   color: #333;
 }
 
+/* Estilos para páginas de detalhes das dicas */
+.dica-detalhes {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+.voltar {
+  margin-bottom: 2rem;
+}
+
+.voltar a {
+  color: rgb(216, 113, 65);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+.voltar a:hover {
+  text-decoration: underline;
+}
+
+.dica-completa h1 {
+  font-size: 2.5rem;
+  color: rgb(216, 113, 65);
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.dica-conteudo h2 {
+  font-size: 1.5rem;
+  color: rgb(216, 113, 65);
+  margin: 2rem 0 1rem 0;
+}
+
+.dica-conteudo p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.dica-conteudo ul {
+  margin: 1rem 0 2rem 1.5rem;
+}
+
+.dica-conteudo li {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 0.5rem;
+  color: #555;
+}
+
+.dica-conteudo strong {
+  color: rgb(216, 113, 65);
+}
+
+.botao-dica:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
+.botao-dica:disabled:hover {
+  background: #ccc;
+  transform: none;
+  box-shadow: none;
+}
+
 /* Responsividade */
 @media (max-width: 768px) {
   .bem-estar-container {
@@ -288,5 +359,17 @@ footer h3 {
   .card {
     width: 100%;
     max-width: 300px;
+  }
+  
+  .dica-detalhes {
+    padding: 1rem;
+  }
+  
+  .dica-completa h1 {
+    font-size: 2rem;
+  }
+  
+  .dica-conteudo h2 {
+    font-size: 1.3rem;
   }
 }

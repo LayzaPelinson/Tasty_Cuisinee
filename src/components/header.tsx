@@ -23,8 +23,8 @@ export default function Header() {
     { label: "Bem-Estar", path: "/bem-estar" },
     { label: "Guia Gastronômico", path: "/guia-gastronomico" },
     { label: "Perfil", path: "/perfil" },
-    { label: "Sobre", path: "/sobre", requireAuth: false },
-    { label: "Contato", path: "/contato", requireAuth: false }
+    { label: "Contato", path: "/contato", requireAuth: false },
+    { label: "Sobre", path: "/sobre", requireAuth: false }
   ]
 
   return (

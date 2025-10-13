@@ -2,14 +2,14 @@ import './css/bem-estar.css'
 import Header from './header'
 
 const dicas = [
-  { emoji: '💧', titulo: 'Hidratação é Essencial', texto: 'Beba pelo menos 2 litros de água por dia. Hidrate-se com sucos naturais e chás sem açúcar.', classe: 'rosa' },
-  { emoji: '🥗', titulo: 'Coma Mais Verde', texto: 'Inclua vegetais em todas as refeições. Eles fornecem fibras e vitaminas importantes para o corpo.', classe: 'lavanda' },
-  { emoji: '⏰', titulo: 'Refeições Regulares', texto: 'Não pule refeições! Manter uma rotina ajuda seu metabolismo a funcionar corretamente.', classe: 'verde' },
-  { emoji: '🥜', titulo: 'Lanches Inteligentes', texto: 'Evite industrializados. Prefira castanhas, frutas secas, iogurte natural e outros snacks saudáveis.', classe: 'lilas' },
-  { emoji: '🧘', titulo: 'Mente e Corpo', texto: 'Alimentação saudável também inclui bem-estar mental. Pratique meditação ou uma atividade relaxante.', classe: 'lavanda' },
-  { emoji: '🍓', titulo: 'Menos Açúcar', texto: 'Reduza o consumo de açúcar refinado e explore adoçantes naturais, como mel e frutas.', classe: 'rosa' },
-  { emoji: '🍳', titulo: 'Café da Manhã Completo', texto: 'Inclua proteínas, fibras e frutas para começar o dia com energia e saciedade.', classe: 'verde' },
-  { emoji: '🚫', titulo: 'Evite Ultraprocessados', texto: 'Alimentos industrializados têm aditivos nocivos. Prefira o que vem direto da natureza.', classe: 'lilas' }
+  { emoji: '💧', titulo: 'Hidratação é Essencial', texto: 'Beba pelo menos 2 litros de água por dia. Hidrate-se com sucos naturais e chás sem açúcar.', classe: 'rosa', link: null },
+  { emoji: '🥗', titulo: 'Coma Mais Verde', texto: 'Inclua vegetais em todas as refeições. Eles fornecem fibras e vitaminas importantes para o corpo.', classe: 'lavanda', link: null },
+  { emoji: '⏰', titulo: 'Refeições Regulares', texto: 'Não pule refeições! Manter uma rotina ajuda seu metabolismo a funcionar corretamente.', classe: 'verde', link: null },
+  { emoji: '🥜', titulo: 'Lanches Inteligentes', texto: 'Evite industrializados. Prefira castanhas, frutas secas, iogurte natural e outros snacks saudáveis.', classe: 'lilas', link: null },
+  { emoji: '🧘', titulo: 'Mente e Corpo', texto: 'Alimentação saudável também inclui bem-estar mental. Pratique meditação ou uma atividade relaxante.', classe: 'lavanda', link: '/mente-corpo' },
+  { emoji: '🍓', titulo: 'Menos Açúcar', texto: 'Reduza o consumo de açúcar refinado e explore adoçantes naturais, como mel e frutas.', classe: 'rosa', link: '/menos-acucar' },
+  { emoji: '🍳', titulo: 'Café da Manhã Completo', texto: 'Inclua proteínas, fibras e frutas para começar o dia com energia e saciedade.', classe: 'verde', link: '/cafe-manha' },
+  { emoji: '🚫', titulo: 'Evite Ultraprocessados', texto: 'Alimentos industrializados têm aditivos nocivos. Prefira o que vem direto da natureza.', classe: 'lilas', link: null }
 ]
 
 const nutricionistas = [
@@ -34,7 +34,11 @@ export default function BemEstar() {
               <div key={index} className={`dica-card ${dica.classe}`}>
                 <h2>{dica.emoji} {dica.titulo}</h2>
                 <p>{dica.texto}</p>
-                <button className="botao-dica">Saiba mais</button>
+                {dica.link ? (
+                  <a href={dica.link} className="botao-dica">Saiba mais</a>
+                ) : (
+                  <button className="botao-dica" disabled>Saiba mais</button>
+                )}
               </div>
             ))}
           </div>
