@@ -10,7 +10,7 @@ import Home from './components/Home'
 import Perfil from './components/Perfil'
 import Receitas from './components/Receitas'
 import Publicadas from './components/Publicar'
-import VerDetalhes from './components/VerDetalhesR'
+import ReceitaDetalhes from './components/ReceitaDetalhes'
 import VPerfil from './components/Perfil copy'
 import BemEstar from './components/BemEstar'
 import GuiaGastronomico from './components/GuiaGastronomico'
@@ -25,7 +25,7 @@ const router = createBrowserRouter([
   { path: "/perfil", element: <Perfil/> },
   { path: "/receitas", element: <Receitas/> },
   { path: "/publicar", element: <Publicadas/> },
-  { path: '/receitas/:id', element: <VerDetalhes/> },
+  { path: '/receitas/:id', element: <ReceitaDetalhes/> },
   { path: '/aba', element: <VPerfil/> },
   { path: '/bem-estar', element: <BemEstar/> },
   { path: '/guia-gastronomico', element: <GuiaGastronomico/> },

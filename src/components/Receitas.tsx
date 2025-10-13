@@ -1,4 +1,5 @@
 import { useMemo, useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 import { MOCK_RECIPES } from './data/recipes'
 import './css/Receitas.css'
 import Header from './header'
@@ -18,6 +19,7 @@ const getCategoryClass = (category: string) => {
 }
 
 export default function Receitas() {
+  const navigate = useNavigate()
   const [busca, setBusca] = useState('')
   const [categoria, setCategoria] = useState('Todos')
 
@@ -78,7 +80,7 @@ export default function Receitas() {
                 </svg> {r.likes}
               </button>
             </div>
-            <button className="ver-receita" onClick={() => window.location.href = `/receitas/${r.id}`}>Ver Receita</button>
+            <button className="ver-receita" onClick={() => navigate(`/receitas/${r.id}`)}>Ver Receita</button>
           </article>
         ))}
         {receitasFiltradas.length === 0 && (

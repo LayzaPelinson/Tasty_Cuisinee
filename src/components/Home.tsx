@@ -1,7 +1,10 @@
+import { useNavigate } from 'react-router-dom'
 import './css/Home.css'
 import Header from './header'
     
 export default function Home() {
+  const navigate = useNavigate()
+  
   return (
     <div className='full-page'>
       <Header />
@@ -10,8 +13,8 @@ export default function Home() {
         <h2>Sabor de Sobra</h2>
         <h3>Receitas deliciosas criadas com amor e diversão!</h3>
         <div className="buttons">
-          <button onClick={() => window.location.href = "/receitas"}>Ver Receitas</button>
-          <button onClick={() => window.location.href = "/publicar"}>Publicar Receita</button>
+          <button onClick={() => navigate("/receitas")}>Ver Receitas</button>
+          <button onClick={() => navigate("/publicar")}>Publicar Receita</button>
         </div>
       </div>
     </div>
