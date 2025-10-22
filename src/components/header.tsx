@@ -11,7 +11,7 @@ export default function Header() {
   const navigate = (path: string, requireAuth = true) => {
     if (requireAuth && !isLogged) {
       alert("Você precisa estar logado para acessar a página")
-      window.location.href = "/login"
+      window.location.href = "/loginnew"
     } else {
       window.location.href = path
     }
