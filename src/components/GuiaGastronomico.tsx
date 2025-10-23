@@ -1,5 +1,6 @@
 import './css/guia-gastronomico.css'
 import Header from './header'
+import Footer from './Footer'
 
 const chefes = [
   { id: 'maria-lima', nome: 'Maria Lima', descricao: 'Especialista em culinária vegetariana e saudável. Criadora do restaurante "Sabor da Terra".', img: 'img/chefe1.jpg' },
@@ -79,6 +80,7 @@ export default function GuiaGastronomico() {
           </div>
         </section>
       </main>
+      <Footer />
     </div>
   )
 }

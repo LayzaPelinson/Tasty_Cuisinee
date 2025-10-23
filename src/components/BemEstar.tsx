@@ -1,5 +1,6 @@
 import './css/bem-estar.css'
 import Header from './header'
+import Footer from './Footer'
 
 const dicas = [
   { emoji: '💧', titulo: 'Hidratação é Essencial', texto: 'Beba pelo menos 2 litros de água por dia. Hidrate-se com sucos naturais e chás sem açúcar.', classe: 'rosa', link: '/hidratacao' },
@@ -54,6 +55,7 @@ export default function BemEstar() {
           </div>
         </section>
       </main>
+      <Footer />
     </div>
   )
 }

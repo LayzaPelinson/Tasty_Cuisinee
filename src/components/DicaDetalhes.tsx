@@ -1,6 +1,7 @@
 import { useLocation } from 'react-router-dom'
 import './css/bem-estar.css'
 import Header from './header'
+import Footer from './Footer'
 
 const dicasDetalhes = {
   'hidratacao': {
@@ -214,6 +215,7 @@ export default function DicaDetalhes() {
           </div>
         </div>
       </div>
+      <Footer />
     </div>
   )
 }

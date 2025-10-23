@@ -1,6 +1,7 @@
 import { useLocation } from 'react-router-dom'
 import './css/guia-gastronomico.css'
 import Header from './header'
+import Footer from './Footer'
 
 const chefesDetalhes = {
   'maria-lima': {
@@ -105,6 +106,7 @@ export default function PerfilChefe() {
           </a>
         </div>
       </main>
+      <Footer />
     </div>
   )
 }

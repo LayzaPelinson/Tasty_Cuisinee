@@ -1,6 +1,7 @@
 import { useLocation } from 'react-router-dom'
 import './css/guia-gastronomico.css'
 import Header from './header'
+import Footer from './Footer'
 
 const restaurantesDetalhes = {
   'flor-de-sal': {
@@ -139,6 +140,7 @@ export default function PerfilRestaurante() {
           </a>
         </div>
       </main>
+      <Footer />
     </div>
   )
 }

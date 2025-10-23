@@ -1,12 +1,13 @@
 import { useNavigate } from 'react-router-dom'
 import './css/Home.css'
 import Header from './header'
+import Footer from './Footer'
     
 export default function Home() {
   const navigate = useNavigate()
   
   return (
-    <div className='full-page'>
+    <div className='full-page' style={{display: 'flex', flexDirection: 'column', minHeight: '100vh'}}>
       <Header />
       <div className='Page'>
         <h1>Comida de verdade,</h1>
@@ -17,6 +18,7 @@ export default function Home() {
           <button onClick={() => navigate("/publicar")}>Publicar Receita</button>
         </div>
       </div>
+      <Footer />
     </div>
   )
 }
