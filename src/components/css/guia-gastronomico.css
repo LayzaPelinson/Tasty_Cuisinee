@@ -53,8 +53,8 @@ main {
 .chefes-intro h2 {
   font-size: 2.2rem;
   color: rgb(216, 113, 65);
+  margin-top: 120vh;
   margin-bottom: 10px;
-
 }
 
 .chefes-intro p {
