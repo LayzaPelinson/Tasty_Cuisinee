@@ -97,6 +97,7 @@ nav ul {
   display: grid;
   grid-template-columns: 1fr;
   gap: 1.5rem;
+  margin-top: 20px;
 
 }
 
