@@ -21,6 +21,7 @@ import LoginNew from './components/LoginNew.tsx'
 import DicaDetalhes from './components/DicaDetalhes'
 import PerfilChefe from './components/PerfilChefe'
 import PerfilRestaurante from './components/PerfilRestaurante'
+import ADM from './components/ADM'
 
 const router = createBrowserRouter([
   { path: "/", element: <App/> },
@@ -48,6 +49,7 @@ const router = createBrowserRouter([
   { path: '/ultraprocessados', element: <DicaDetalhes/> },
   { path: '/perfil-chefe', element: <PerfilChefe/> },
   { path: '/restaurante-detalhes', element: <PerfilRestaurante/> },
+  { path: "/ADM", element: <ADM/> },
   { path: '*', element: <div style={{textAlign: 'center', padding: '2rem'}}><h2>Página não encontrada</h2><a href="/">Voltar ao início</a></div> }
 ])
 
