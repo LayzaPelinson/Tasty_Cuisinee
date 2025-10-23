@@ -21,7 +21,12 @@ nav ul {
   margin: 0;
   padding: 0;
 }
-
+section{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
 .menu {
   list-style: none;
   display: flex;
@@ -47,6 +52,10 @@ main {
   padding: 40px 20px;
   text-align: center;
   padding-top: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 /* Seção Chefes */
