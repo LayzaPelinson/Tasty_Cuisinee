@@ -2,14 +2,14 @@ import './css/bem-estar.css'
 import Header from './header'
 
 const dicas = [
-  { emoji: '💧', titulo: 'Hidratação é Essencial', texto: 'Beba pelo menos 2 litros de água por dia. Hidrate-se com sucos naturais e chás sem açúcar.', classe: 'rosa' },
-  { emoji: '🥗', titulo: 'Coma Mais Verde', texto: 'Inclua vegetais em todas as refeições. Eles fornecem fibras e vitaminas importantes para o corpo.', classe: 'lavanda' },
-  { emoji: '⏰', titulo: 'Refeições Regulares', texto: 'Não pule refeições! Manter uma rotina ajuda seu metabolismo a funcionar corretamente.', classe: 'verde' },
-  { emoji: '🥜', titulo: 'Lanches Inteligentes', texto: 'Evite industrializados. Prefira castanhas, frutas secas, iogurte natural e outros snacks saudáveis.', classe: 'lilas' },
+  { emoji: '💧', titulo: 'Hidratação é Essencial', texto: 'Beba pelo menos 2 litros de água por dia. Hidrate-se com sucos naturais e chás sem açúcar.', classe: 'rosa', link: '/hidratacao' },
+  { emoji: '🥗', titulo: 'Coma Mais Verde', texto: 'Inclua vegetais em todas as refeições. Eles fornecem fibras e vitaminas importantes para o corpo.', classe: 'lavanda', link: '/vegetais' },
+  { emoji: '⏰', titulo: 'Refeições Regulares', texto: 'Não pule refeições! Manter uma rotina ajuda seu metabolismo a funcionar corretamente.', classe: 'verde', link: '/refeicoes-regulares' },
+  { emoji: '🥜', titulo: 'Lanches Inteligentes', texto: 'Evite industrializados. Prefira castanhas, frutas secas, iogurte natural e outros snacks saudáveis.', classe: 'lilas', link: '/lanches-saudaveis' },
   { emoji: '🧘', titulo: 'Mente e Corpo', texto: 'Alimentação saudável também inclui bem-estar mental. Pratique meditação ou uma atividade relaxante.', classe: 'lavanda', link: '/mente-corpo' },
   { emoji: '🍓', titulo: 'Menos Açúcar', texto: 'Reduza o consumo de açúcar refinado e explore adoçantes naturais, como mel e frutas.', classe: 'rosa', link: '/menos-acucar' },
   { emoji: '🍳', titulo: 'Café da Manhã Completo', texto: 'Inclua proteínas, fibras e frutas para começar o dia com energia e saciedade.', classe: 'verde', link: '/cafe-manha' },
-  { emoji: '🚫', titulo: 'Evite Ultraprocessados', texto: 'Alimentos industrializados têm aditivos nocivos. Prefira o que vem direto da natureza.', classe: 'lilas' }
+  { emoji: '🚫', titulo: 'Evite Ultraprocessados', texto: 'Alimentos industrializados têm aditivos nocivos. Prefira o que vem direto da natureza.', classe: 'lilas', link: '/ultraprocessados' }
 ]
 
 const nutricionistas = [

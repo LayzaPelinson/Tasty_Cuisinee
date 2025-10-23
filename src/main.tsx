@@ -18,6 +18,7 @@ import Contato from './components/Contato'
 import Sobre from './components/Sobre'
 import VCdastro from './components/Cadastronew.tsx'
 import LoginNew from './components/LoginNew.tsx'
+import DicaDetalhes from './components/DicaDetalhes'
 
 const router = createBrowserRouter([
   { path: "/", element: <App/> },
@@ -35,6 +36,14 @@ const router = createBrowserRouter([
   { path: '/sobre', element: <Sobre/> },
   { path: '/cadastronew', element: <VCdastro/>  },
   { path: '/loginnew', element: <LoginNew/> },
+  { path: '/hidratacao', element: <DicaDetalhes/> },
+  { path: '/vegetais', element: <DicaDetalhes/> },
+  { path: '/refeicoes-regulares', element: <DicaDetalhes/> },
+  { path: '/lanches-saudaveis', element: <DicaDetalhes/> },
+  { path: '/mente-corpo', element: <DicaDetalhes/> },
+  { path: '/menos-acucar', element: <DicaDetalhes/> },
+  { path: '/cafe-manha', element: <DicaDetalhes/> },
+  { path: '/ultraprocessados', element: <DicaDetalhes/> },
   { path: '*', element: <div style={{textAlign: 'center', padding: '2rem'}}><h2>Página não encontrada</h2><a href="/">Voltar ao início</a></div> }
 ])
 
