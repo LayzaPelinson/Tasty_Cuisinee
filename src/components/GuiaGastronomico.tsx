@@ -36,7 +36,7 @@ export default function GuiaGastronomico() {
                 <img src={chefe.img} alt={`Chefe ${chefe.nome}`} />
                 <h3>{chefe.nome}</h3>
                 <p>{chefe.descricao}</p>
-                <button onClick={() => window.location.href = `perfil-chefe.html?chefe=${chefe.id}`}>Ver Perfil</button>
+                <button onClick={() => window.location.href = `/perfil-chefe?chefe=${chefe.id}`}>Ver Perfil</button>
               </div>
             ))}
           </div>
@@ -64,7 +64,7 @@ export default function GuiaGastronomico() {
                 <h2>{rest.nome}</h2>
                 <p><strong>Localização:</strong> {rest.localizacao}</p>
                 <p><strong>Culinária:</strong> {rest.culinaria}</p>
-                <a href={`restaurante-detalhes.html?id=${rest.id}`}>Ver mais</a>
+                <a href={`/restaurante-detalhes?id=${rest.id}`}>Ver mais</a>
               </div>
             ))}
           </div>

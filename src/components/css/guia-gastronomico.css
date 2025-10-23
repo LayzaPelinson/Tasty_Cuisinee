@@ -141,6 +141,7 @@ main {
 }
 
 .chefe-card {
+  background: #ffc787;
   border-radius: 16px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.05);
   width: 260px;
@@ -174,13 +175,18 @@ main {
 }
 
 .chefe-card button {
-  background: #ffc787;
-  color: #333;
+  background: rgb(216, 113, 65);
+  color: white;
   border: none;
   padding: 10px 20px;
   border-radius: 24px;
   cursor: pointer;
   font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.chefe-card button:hover {
+  background: rgb(255, 144, 92);
 }
 
 
@@ -233,6 +239,7 @@ main {
 }
 
 .restaurante-card {
+  background: #ffc787;
   padding: 20px;
   border-radius: 16px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);

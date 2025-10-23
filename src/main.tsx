@@ -19,6 +19,8 @@ import Sobre from './components/Sobre'
 import VCdastro from './components/Cadastronew.tsx'
 import LoginNew from './components/LoginNew.tsx'
 import DicaDetalhes from './components/DicaDetalhes'
+import PerfilChefe from './components/PerfilChefe'
+import PerfilRestaurante from './components/PerfilRestaurante'
 
 const router = createBrowserRouter([
   { path: "/", element: <App/> },
@@ -44,6 +46,8 @@ const router = createBrowserRouter([
   { path: '/menos-acucar', element: <DicaDetalhes/> },
   { path: '/cafe-manha', element: <DicaDetalhes/> },
   { path: '/ultraprocessados', element: <DicaDetalhes/> },
+  { path: '/perfil-chefe', element: <PerfilChefe/> },
+  { path: '/restaurante-detalhes', element: <PerfilRestaurante/> },
   { path: '*', element: <div style={{textAlign: 'center', padding: '2rem'}}><h2>Página não encontrada</h2><a href="/">Voltar ao início</a></div> }
 ])
 
