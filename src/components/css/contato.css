@@ -11,7 +11,7 @@ main{
 .contato-container {
   padding: 40px 20px;
   max-width: 600px;
-  margin: 120px auto 0;
+  margin: 10px auto 0;
   text-align: center;
 }
 
@@ -19,6 +19,7 @@ main{
   font-size: 2.5rem;
   color: rgb(216, 113, 65);
   margin-bottom: 20px;
+  margin-top: 32px;
 }
 
 .contato-subtitulo {
