@@ -3,7 +3,6 @@ import { createRoot } from 'react-dom/client'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import 'bootstrap/dist/css/bootstrap.css'
 
-import App from './App'
 import Login from './components/Login'
 import Cadastro from './components/Cadastro'
 import Home from './components/Home'
@@ -23,7 +22,7 @@ import PerfilChefe from './components/PerfilChefe'
 import PerfilRestaurante from './components/PerfilRestaurante'
 
 const router = createBrowserRouter([
-  { path: "/", element: <App/> },
+  { path: "/", element: <Home/> },
   { path: "/login", element: <Login/> },
   { path: "/cadastro", element: <Cadastro/> },
   { path: "/home", element: <Home/> },

@@ -1,6 +1,6 @@
 
 * {
-  margin: 0;
+  margin-left: 0;
   padding: 0;
   box-sizing: border-box;
 }
@@ -16,6 +16,7 @@ body {
     padding: 1rem;
     max-height: 100vh;
     padding-top: 120px;
+    padding-bottom: 3800px;
   }
   
   h1 {
@@ -94,6 +95,7 @@ body {
   
   /* ======= Grid de receitas ======= */
   .grid-receitas {
+    padding-left: 150px;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
     gap: 1.2rem;

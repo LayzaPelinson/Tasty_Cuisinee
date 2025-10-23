@@ -92,7 +92,9 @@ export default function Receitas() {
         )}
       </section>
     </main>
-      <Footer />
+    <footer>
+        <Footer />
+    </footer>
     </div>
   )
 }
