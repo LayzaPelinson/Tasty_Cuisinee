@@ -6,7 +6,6 @@
 }
 
 body {
-  background: white;
   color: #333;
 }
 
@@ -104,7 +103,6 @@ main {
 }
 
 .indique-chefe-form input {
-  background-color: #FFFFFF;
   color: #333;
 }
 
@@ -143,7 +141,6 @@ main {
 }
 
 .chefe-card {
-  background: #FFFFFF;
   border-radius: 16px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.05);
   width: 260px;
@@ -236,7 +233,6 @@ main {
 }
 
 .restaurante-card {
-  background: #FFFFFF;
   padding: 20px;
   border-radius: 16px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -312,7 +308,6 @@ main {
 }
 
 .indique-restaurante-form input {
-  background-color: #FFFFFF;
   color: #333;
 }
 

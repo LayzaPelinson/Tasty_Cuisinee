@@ -29,7 +29,6 @@ main{
 }
 
 .formulario-contato {
-  background: #FFFFFF;
   padding: 30px;
   border-radius: 16px;
   box-shadow: 0 4px 16px rgba(0,0,0,0.1);
@@ -78,7 +77,6 @@ main{
 .formulario-contato textarea:focus {
   outline: none;
   border-color: rgb(216, 113, 65);
-  background: #FFFFFF;
   box-shadow: 0 0 0 3px rgba(216, 113, 65, 0.1);
 }
 
@@ -104,7 +102,6 @@ main{
 
 .formulario-contato button:hover {
   background: rgb(255, 144, 92);
-  color: #fff;
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(216, 113, 65, 0.3);
 }
