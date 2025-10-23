@@ -24,7 +24,7 @@ const nutricionistas = [
 
 export default function BemEstar() {
   return (
-    <div>
+    <div style={{display: 'flex', flexDirection: 'column', minHeight: '100vh'}}>
       <Header />
       <main className="bem-estar-container">
         <section className="dicas-section">

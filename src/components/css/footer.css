@@ -1,7 +1,9 @@
 .site-footer {
   background: #ffc787;
-  padding: 30px 20px;
+  padding: 30px 0;
   margin-top: auto;
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
 }
 
 .footer-content {
@@ -11,6 +13,8 @@
   width: 100%;
   flex-wrap: wrap;
   gap: 20px;
+  padding: 0 20px;
+  max-width: none;
 }
 
 .footer-info {

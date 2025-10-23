@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom'
 import { MOCK_RECIPES } from './data/recipes'
 import './css/Receitas.css'
 import Header from './header'
+import Footer from './Footer'
 
 const CATEGORIES = ['Todos', 'Café da Manhã', 'Snacks', 'Marmitas Fit', 'Veganas', 'Detox', 'Low Carb', 'Sobremesas Saudáveis']
 
@@ -32,8 +33,9 @@ export default function Receitas() {
   }, [busca, categoria])
 
   return (
-    <main className="receitas-main">
+    <div style={{display: 'flex', flexDirection: 'column', minHeight: '100vh'}}>
       <Header/>
+    <main className="receitas-main" style={{flex: 1}}>
       <section className="search-bar">
         <form className="search-form" onSubmit={e => e.preventDefault()}>
           <input
@@ -90,5 +92,7 @@ export default function Receitas() {
         )}
       </section>
     </main>
+      <Footer />
+    </div>
   )
 }

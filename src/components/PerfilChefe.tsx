@@ -44,7 +44,7 @@ export default function PerfilChefe() {
 
   if (!chefe) {
     return (
-      <div>
+      <div style={{display: 'flex', flexDirection: 'column', minHeight: '100vh'}}>
         <Header />
         <div style={{ textAlign: 'center', padding: '2rem', paddingTop: '140px' }}>
           <h2>Chefe não encontrado</h2>
@@ -55,7 +55,7 @@ export default function PerfilChefe() {
   }
 
   return (
-    <div>
+    <div style={{display: 'flex', flexDirection: 'column', minHeight: '100vh'}}>
       <Header />
       <main style={{ paddingTop: '120px', padding: '40px 20px', maxWidth: '800px', margin: '0 auto' }}>
         <div style={{ marginBottom: '2rem' }}>

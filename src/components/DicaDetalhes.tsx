@@ -173,7 +173,7 @@ export default function DicaDetalhes() {
 
   if (!dica) {
     return (
-      <div>
+      <div style={{display: 'flex', flexDirection: 'column', minHeight: '100vh'}}>
         <Header />
         <div style={{ textAlign: 'center', padding: '2rem', paddingTop: '140px' }}>
           <h2>Dica não encontrada</h2>
@@ -184,7 +184,7 @@ export default function DicaDetalhes() {
   }
 
   return (
-    <div>
+    <div style={{display: 'flex', flexDirection: 'column', minHeight: '100vh'}}>
       <Header />
       <div className="bem-estar-container">
         <div className="dica-detalhes">

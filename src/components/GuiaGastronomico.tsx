@@ -22,7 +22,7 @@ export default function GuiaGastronomico() {
   }
 
   return (
-    <div>
+    <div style={{display: 'flex', flexDirection: 'column', minHeight: '100vh'}}>
       <Header />
       <main>
         <section className="chefes-intro">

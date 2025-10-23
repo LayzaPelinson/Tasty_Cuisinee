@@ -1,10 +1,11 @@
 import React from 'react';
 import Header from './header';
 import './css/sobre.css';
+import Footer from './Footer';
 
 const Sobre: React.FC = () => {
   return (
-    <div>
+    <div style={{display: 'flex', flexDirection: 'column', minHeight: '100vh'}}>
       <Header />
 
       <main className="sobre-container">
@@ -73,7 +74,7 @@ const Sobre: React.FC = () => {
           </div>
         </section>
       </main>
-
+      <Footer />
     </div>
   );
 };

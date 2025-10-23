@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import './css/contato.css'
 import Header from './header'
+import Footer from './Footer'
 
 export default function Contato() {
   const [formData, setFormData] = useState({ nome: '', email: '', mensagem: '' })
@@ -16,7 +17,7 @@ export default function Contato() {
   }
 
   return (
-    <>
+    <div style={{display: 'flex', flexDirection: 'column', minHeight: '100vh'}}>
       <Header />
       <main className="contato-container">
         <h1 className="contato-titulo">Fale Conosco</h1>
@@ -70,6 +71,7 @@ export default function Contato() {
           <button type="submit">Enviar Mensagem</button>
         </form>
       </main>
-    </>
+      <Footer />
+    </div>
   )
 }

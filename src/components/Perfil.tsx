@@ -1,5 +1,6 @@
 import Header from "./header"
 import './css/Perfil.css'
+import Footer from './Footer'
 
 export default function Perfil() {
   const nome = localStorage.getItem("nome")
@@ -9,7 +10,7 @@ export default function Perfil() {
   const senha = localStorage.getItem("senha")
 
   return (
-    <div>
+    <div style={{display: 'flex', flexDirection: 'column', minHeight: '100vh'}}>
       <Header/>
       <main className="perfil-container">
         <aside className="perfil-card">
@@ -63,6 +64,7 @@ export default function Perfil() {
           <div className="conteudo publicadas" id="publicadas"></div>
         </section>
       </main>
+      <Footer />
     </div>
   )
 }
