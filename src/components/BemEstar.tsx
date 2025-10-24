@@ -31,13 +31,14 @@ export default function BemEstar() {
           <p className="subtitulo">Pequenas mudanças podem fazer uma grande diferença na sua jornada de bem-estar. Confira nossas dicas!</p>
           <div className="dicas-lista">
             {dicas.map((dica, index) => (
-              <div key={index} className={`dica-card ${dica.classe}`}>
-                <h2>{dica.emoji} {dica.titulo}</h2>
-                <p>{dica.texto}</p>
-                {dica.link && <a href={dica.link} className="botao-dica">Saiba mais</a>}
-              </div>
-            ))}
+            <div key={index} className={`dica-card ${dica.classe}`}>
+            <h2>{dica.emoji} {dica.titulo}</h2>
+            <p>{dica.texto}</p>
+            <a href={dica.link || '/bem-estar'} className="botao-dica">Saiba mais</a>
           </div>
+        ))}
+        </div>
+
         </section>
 
         <section className="consulta-section">
