@@ -4,7 +4,26 @@ import { MOCK_RECIPES } from './data/recipes'
 import './css/Receitas.css'
 import Header from './header'
 
-const CATEGORIES = ['Todos', 'Café da Manhã', 'Snacks', 'Marmitas Fit', 'Veganas', 'Detox', 'Low Carb', 'Sobremesas Saudáveis']
+type Recipe = {
+  id: number
+  title: string
+  image: string
+  category: string
+  time: string
+  difficulty: string
+  likes: number
+}
+
+const CATEGORIES: string[] = [
+  'Todos',
+  'Café da Manhã',
+  'Snacks',
+  'Marmitas Fit',
+  'Veganas',
+  'Detox',
+  'Low Carb',
+  'Sobremesas Saudáveis'
+]
 
 const getCategoryClass = (category: string) => {
   const classes: Record<string, string> = {
@@ -20,11 +39,11 @@ const getCategoryClass = (category: string) => {
 
 export default function Receitas() {
   const navigate = useNavigate()
-  const [busca, setBusca] = useState('')
-  const [categoria, setCategoria] = useState('Todos')
+  const [busca, setBusca] = useState<string>('')
+  const [categoria, setCategoria] = useState<string>('Todos')
 
   const receitasFiltradas = useMemo(() => {
-    return MOCK_RECIPES.filter(r => {
+    return MOCK_RECIPES.filter((r: Recipe) => {
       const matchCategoria = categoria === 'Todos' || r.category === categoria
       const matchBusca = r.title.toLowerCase().includes(busca.trim().toLowerCase())
       return matchCategoria && matchBusca
@@ -33,7 +52,8 @@ export default function Receitas() {
 
   return (
     <main className="receitas-main">
-      <Header/>
+      <Header />
+
       <section className="search-bar">
         <form className="search-form" onSubmit={e => e.preventDefault()}>
           <input
@@ -41,11 +61,12 @@ export default function Receitas() {
             placeholder="Buscar receita por nome..."
             value={busca}
             onChange={e => setBusca(e.target.value)}
+            aria-label="Buscar receita"
           />
           <button type="submit" className="search-icon" aria-label="Buscar">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
-              <circle cx="11" cy="11" r="8" stroke="currentColor" strokeWidth="2"/>
-              <path d="m21 21-4.35-4.35" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden>
+              <circle cx="11" cy="11" r="7" stroke="currentColor" strokeWidth="2" />
+              <path d="m21 21-4.3-4.3" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
             </svg>
           </button>
         </form>
@@ -55,8 +76,9 @@ export default function Receitas() {
         {CATEGORIES.map(cat => (
           <button
             key={cat}
-            className={categoria === cat ? 'ativo' : ''}
+            className={`filtro-btn ${categoria === cat ? 'ativo' : ''}`}
             onClick={() => setCategoria(cat)}
+            type="button"
           >
             {cat}
           </button>
@@ -64,29 +86,42 @@ export default function Receitas() {
       </div>
 
       <section className="grid-receitas">
-        {receitasFiltradas.map(r => (
+        {receitasFiltradas.map((r: Recipe) => (
           <article key={r.id} className="card-receita">
             <div className="imagem-receita">
               <img src={r.image} alt={r.title} />
             </div>
-            <span className={`tag ${getCategoryClass(r.category)}`}>{r.category}</span>
-            <h2 className='Card-Title'>{r.title}</h2>
-            <div className="info-receita">
-              <span>🕒 {r.time}</span>
-              <span>⚙ {r.difficulty}</span>
-              <button className='Favoritar'>
-                <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
-                  <path fillRule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314"/>
-                </svg> {r.likes}
-              </button>
+
+            <div className="card-body">
+              <span className={`tag ${getCategoryClass(r.category)}`}>{r.category}</span>
+              <h3 className="card-title">{r.title}</h3>
+
+              <div className="info-receita">
+                <span className="meta">🕒 {r.time}</span>
+                <span className="meta">⚙ {r.difficulty}</span>
+                <button className="favoritar" aria-label="Favoritar">
+                  <svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor" aria-hidden>
+                    <path d="M8 1.3c1.7-3.6 9.3 2.9 0 13.4C-1.3 3.2 6.3-2.3 8 1.3z" />
+                  </svg>
+                  <span className="likes-count">{r.likes}</span>
+                </button>
+              </div>
+
+              <div className="card-actions">
+                <button
+                  className="ver-receita"
+                  onClick={() => navigate(`/receitas/${r.id}`)}
+                  type="button"
+                >
+                  Ver Receita
+                </button>
+              </div>
             </div>
-            <button className="ver-receita" onClick={() => navigate(`/receitas/${r.id}`)}>Ver Receita</button>
           </article>
         ))}
+
         {receitasFiltradas.length === 0 && (
-          <p style={{ gridColumn: '1/-1', textAlign: 'center', color: '#777' }}>
-            Nenhuma receita encontrada com os filtros atuais.
-          </p>
+          <p className="nenhuma">Nenhuma receita encontrada com os filtros atuais.</p>
         )}
       </section>
     </main>
