@@ -1,4 +1,4 @@
-
+/* Reset básico */
 * {
   margin: 0;
   padding: 0;
@@ -6,21 +6,23 @@
   font-family: 'Fredoka', sans-serif;
 }
 
+/* Container principal */
 main.perfil-container {
   display: flex;
   gap: 20px;
   padding: 20px;
-  max-width: 1100px;
-  margin-top: 120px;
+  max-width: 1200px;
+  margin: 120px auto 0;
+  align-items: flex-start;
 }
 
-
-
+/* Card do perfil (lateral esquerda) */
 .perfil-card {
   width: 280px;
-  background-color: #fff;
+  flex-shrink: 0;
+  background: #fff;
   border-radius: 12px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
   padding: 20px;
   text-align: center;
 }
@@ -28,14 +30,9 @@ main.perfil-container {
 .foto-perfil {
   width: 100px;
   height: 100px;
-  background-color: #ddd;
+  background: #ddd;
   border-radius: 50%;
   margin: 0 auto 10px;
-}
-
-#sidebar-name {
-  font-size: 1.2rem;
-  margin: 8px 0;
 }
 
 .email {
@@ -44,27 +41,7 @@ main.perfil-container {
   margin-bottom: 15px;
 }
 
-/* === Barra de Progresso === */
-.progresso {
-  margin: 15px 0;
-}
-
-.barra {
-  background-color: #eee;
-  border-radius: 10px;
-  height: 10px;
-  width: 100%;
-  overflow: hidden;
-}
-
-.preenchida {
-  background-color: rgb(216, 113, 65);
-  width: 75%;
-  height: 100%;
-  border-radius: 10px;
-}
-
-/* === Tags === */
+/* Tags do perfil */
 .tags {
   display: flex;
   flex-wrap: wrap;
@@ -73,101 +50,159 @@ main.perfil-container {
 }
 
 .tag {
-  padding: 5px 10px;
+  padding: 5px 12px;
   border-radius: 20px;
   font-size: 0.85rem;
 }
 
 .tag.verde {
-  background-color: #ffc787;
+  background: #ffc787;
   color: #333;
 }
 
-/* === Conteúdo do Perfil === */
+/* Barra de progresso */
+.progresso {
+  margin: 15px 0;
+}
+
+.barra {
+  background: #eee;
+  border-radius: 10px;
+  height: 10px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.preenchida {
+  background: rgb(216,113,65);
+  width: 75%;
+  height: 100%;
+  border-radius: 10px;
+}
+
+/* Conteúdo do perfil (lado direito) */
 .conteudo-perfil {
   flex: 1;
-  background-color: #fff;
+  background: #fff;
   border-radius: 12px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-  padding: 20px;
-}
-
-/* Abas */
-.abas {
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  padding: 30px 25px;
+  min-width: 0;
   display: flex;
-  gap: 10px;
-  margin-bottom: 20px;
+  flex-direction: column;
+  gap: 30px;
 }
 
-.aba {
-  border: none;
-  background-color: #f1f1f1;
-  padding: 10px 15px;
-  border-radius: 8px;
-  cursor: pointer;
-}
-
-.aba.ativa {
-  background-color: rgb(216, 113, 65);
-  color: #fff;
-}
-
-.aba:hover {
-  background-color: #dcdcdc;
-}
-
-/* Conteúdo */
+/* Seções internas */
 .conteudo {
   display: none;
+  width: 100%;
 }
 
 .conteudo.ativa {
   display: block;
 }
 
-.conteudo input,
-.conteudo select {
-  display: block;
-  width: 100%;
-  padding: 8px;
-  margin: 6px 0 15px;
-  border: 1px solid #ccc;
-  border-radius: 6px;
+/* Títulos das seções */
+.conteudo h3 {
+  font-size: 1.4rem;
+  margin-bottom: 15px;
+  color: rgb(216,113,65);
+  border-bottom: 2px solid #f1f1f1;
+  padding-bottom: 5px;
 }
 
+/* Blocos de campos */
+.campo-bloco {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 15px;
+}
+
+.campo-bloco label {
+  font-weight: 500;
+  font-size: 0.95rem;
+  color: #555;
+}
+
+.conteudo input,
+.conteudo select {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  transition: border-color 0.2s;
+}
+
+.conteudo input:focus,
+.conteudo select:focus {
+  outline: none;
+  border-color: rgb(216,113,65);
+}
+
+/* Botão principal */
 .btn-roxo {
-  background-color: rgb(216, 113, 65);
-  color: white;
-  padding: 10px 15px;
+  background: rgb(216,113,65);
+  color: #fff;
+  padding: 12px;
   border: none;
-  border-radius: 6px;
+  border-radius: 8px;
   cursor: pointer;
+  width: 100%;
+  font-size: 1rem;
+  transition: background 0.2s;
 }
 
 .btn-roxo:hover {
-  background-color: rgb(255, 144, 92);
+  background: rgb(255,144,92);
 }
 
-/* === Rodapé === */
-footer {
-  background-color: #333;
-  color: #fff;
-  padding: 30px 0;
-  text-align: center;
-  margin-top: 40px;
+/* Abas */
+.abas {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
 }
 
-footer a {
-  color: #bbb;
-  text-decoration: none;
-  margin: 0 10px;
-}
-
-footer a:hover {
-  color: #fff;
-}
-
-.footer-social i {
-  margin: 0 8px;
+.aba {
+  flex: 1;
+  border: none;
+  background: #f1f1f1;
+  padding: 10px 15px;
+  border-radius: 8px;
   cursor: pointer;
+  text-align: center;
+  font-weight: 500;
+}
+
+.aba.ativa {
+  background: rgb(216,113,65);
+  color: #fff;
+}
+
+.aba:hover {
+  background: #dcdcdc;
+}
+
+/* Responsividade */
+@media (max-width: 900px) {
+  main.perfil-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .perfil-card, .conteudo-perfil {
+    width: 90%;
+  }
+
+  .abas {
+    flex-direction: column;
+  }
+
+  .aba {
+    flex: 1;
+  }
 }
