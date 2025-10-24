@@ -152,6 +152,10 @@ main .conteudo-perfil {
   outline: none;
   border-color: rgb(216,113,65);
 }
+input {
+  border: 2px solid rgb(0, 0, 0) !important;
+}
+
 
 /* Botão principal */
 .btn-roxo {
