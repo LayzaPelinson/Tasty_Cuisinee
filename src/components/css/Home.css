@@ -2,7 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Fredoka', sans-serif;
+  font-family: "Fredoka", sans-serif;
 }
 
 .full-page {
@@ -14,15 +14,16 @@
   overflow-x: hidden;
 }
 
-.Page { 
+.Page {
   text-align: center;
   padding: 75px 20px;
   background-color: #ffc787;
   width: 100%;
   box-sizing: border-box;
+  margin-top: 600px;
 }
 
-.Page h1{
+.Page h1 {
   font-weight: 700;
   color: rgb(216, 113, 65);
   word-wrap: break-word;
@@ -41,7 +42,7 @@
   max-width: 100%;
 }
 
-main h3{
+main h3 {
   padding-left: 20px;
 }
 
@@ -66,7 +67,7 @@ main h3{
 }
 
 .buttons button:hover {
-  background-color:#ffac4d;
+  background-color: #ffac4d;
 }
 
 @media (max-width: 768px) {
@@ -74,7 +75,7 @@ main h3{
     flex-direction: column;
     align-items: center;
   }
-  
+
   .buttons button {
     width: 100%;
     max-width: 250px;
