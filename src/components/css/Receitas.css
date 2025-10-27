@@ -6,8 +6,8 @@
 }
 
 body {
-  font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
-  background: #fffaf3;
+  font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial;
   color: #333;
 }
 
@@ -23,13 +23,15 @@ body {
   display: flex;
   justify-content: center;
   margin-bottom: 1.25rem;
+  margin-top: 100px;
+  margin-bottom: 50px;
 }
 
 .search-form {
   display: flex;
   gap: 0.5rem;
   align-items: center;
-  background: #fff8dc;
+  background: #f0e49a;
   border: 1px solid #e9d89a;
   padding: 0.3rem 0.6rem; /* menor altura */
   border-radius: 22px;
@@ -50,6 +52,7 @@ body {
   border: none;
   cursor: pointer;
   color: #b8860b;
+  margin-top: 0;
 }
 
 /* ================= FILTROS ================= */
@@ -66,17 +69,17 @@ body {
   border-radius: 18px;
   border: 1px solid #e9d89a;
   background: #fff8dc;
-  color: #5b4700;
+  color: #8c6420;
   cursor: pointer;
   font-size: 0.9rem;
 }
 
 .filtro-btn:hover {
-  background: #f7e79a;
+  background: #f0e49a;
 }
 
 .filtro-btn.ativo {
-  background: #f4d03f;
+  background: #8c6420;
   border-color: #b8860b;
   color: #3b2e00;
 }
@@ -90,7 +93,7 @@ body {
 
 /* ================= CARD DE RECEITA ================= */
 .card-receita {
-  background: #fffef7;
+  background: #F0E49A;
   border: 1px solid #f2e9b5;
   border-radius: 14px;
   overflow: hidden;
@@ -102,7 +105,7 @@ body {
 
 .card-receita:hover {
   transform: translateY(-6px);
-  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.10);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.1);
 }
 
 /* ================= IMAGEM ================= */
@@ -156,7 +159,7 @@ body {
   align-items: center;
   justify-content: space-between;
   gap: 0.5rem;
-  color: #7a6a00;
+  color: #8c6420 !important;
   font-size: 0.86rem;
 }
 
@@ -190,8 +193,8 @@ body {
 }
 
 .ver-receita {
-  background: #f4d03f;
-  color: #3b2e00;
+  background: #8C6420;
+  color: #e9b806;
   border: none;
   border-radius: 12px;
   padding: 0.55rem 0.9rem;
@@ -212,25 +215,55 @@ body {
 }
 
 /* ================= CORES DE CATEGORIA ================= */
-.rosa { background: linear-gradient(90deg,#fff0f6,#fff6fb); color:#8b0054; }
-.verde { background: linear-gradient(90deg,#f0fff4,#f7fff9); color:#0b6b3a; }
-.lilas { background: linear-gradient(90deg,#fbf4ff,#fcf9ff); color:#5a2e6d; }
-.lavanda { background: linear-gradient(90deg,#f3f2ff,#fbfbff); color:#4b2e8b; }
-.roxo { background: linear-gradient(90deg,#f5f0ff,#faf8ff); color:#3b2e80; }
+.rosa {
+  background: linear-gradient(90deg, #fff0f6, #fff6fb);
+  color: #8b0054;
+}
+.verde {
+  background: linear-gradient(90deg, #f0fff4, #f7fff9);
+  color: #0b6b3a;
+}
+.lilas {
+  background: linear-gradient(90deg, #fbf4ff, #fcf9ff);
+  color: #5a2e6d;
+}
+.lavanda {
+  background: linear-gradient(90deg, #f3f2ff, #fbfbff);
+  color: #4b2e8b;
+}
+.roxo {
+  background: linear-gradient(90deg, #f5f0ff, #faf8ff);
+  color: #3b2e80;
+}
 
 /* ================= RESPONSIVIDADE ================= */
 @media (max-width: 1100px) {
-  .grid-receitas { grid-template-columns: repeat(3, minmax(0,1fr)); }
-  .search-form input { width: 240px; }
+  .grid-receitas {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+  .search-form input {
+    width: 240px;
+  }
 }
 
 @media (max-width: 800px) {
-  .grid-receitas { grid-template-columns: repeat(2, minmax(0,1fr)); }
-  .receitas-main { padding-top: 90px; }
-  .search-form input { width: 180px; }
+  .grid-receitas {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .receitas-main {
+    padding-top: 90px;
+  }
+  .search-form input {
+    width: 180px;
+  }
 }
 
 @media (max-width: 480px) {
-  .grid-receitas { grid-template-columns: 1fr; gap: 0.8rem; }
-  .search-form input { width: 140px; }
+  .grid-receitas {
+    grid-template-columns: 1fr;
+    gap: 0.8rem;
+  }
+  .search-form input {
+    width: 140px;
+  }
 }

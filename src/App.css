@@ -4,14 +4,19 @@
   box-sizing: border-box;
 }
 
-body, html {
-  background-color: white !important;
+body,
+html {
   margin: 0;
   padding: 0;
+  height: 100%;
+  background: linear-gradient(360deg, #585876 0%, #0c0c0c 100%) !important;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
-
 #root {
-  background-color: white !important;
+  min-height: 100%;
+  background: transparent !important;
 }
 
 .Title {

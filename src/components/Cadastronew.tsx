@@ -141,6 +141,11 @@ export default function CadastroNew() {
           Cadastrar
         </button>
       </form>
+      
+      <p className="signup">
+        Já tem uma conta?
+        <a href="/loginnew"> Login</a>
+      </p>
     </div>
   );
 }

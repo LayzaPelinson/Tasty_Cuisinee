@@ -10,34 +10,34 @@
   flex-direction: column;
   width: 100vw;
   min-height: 100vh;
-  background-color: white;
+  background: transparent;
   overflow-x: hidden;
 }
 
 .Page {
   text-align: center;
   padding: 75px 20px;
-  background-color: #ffc787;
+  background-color: #BDA44C;
   width: 100%;
   box-sizing: border-box;
-  margin-top: 600px;
+  margin-top: 700px;
 }
 
 .Page h1 {
   font-weight: 700;
-  color: rgb(216, 113, 65);
+  color: #8C6420;
   word-wrap: break-word;
 }
 
 .Page h2 {
-  color: rgb(216, 113, 65);
+  color: #8C6420;
   word-wrap: break-word;
 }
 
 .Page h3 {
   padding-top: 15px;
   font-size: 20px;
-  color: #5a5a5a;
+  color: #F0E49A;
   word-wrap: break-word;
   max-width: 100%;
 }
@@ -56,7 +56,7 @@ main h3 {
 }
 
 .buttons button {
-  background-color: rgb(255, 144, 92);
+  background-color: #8C6420;
   border: none;
   padding: 15px 20px;
   border-radius: 10px;
@@ -67,7 +67,7 @@ main h3 {
 }
 
 .buttons button:hover {
-  background-color: #ffac4d;
+  background-color: #9c6f26;
 }
 
 @media (max-width: 768px) {

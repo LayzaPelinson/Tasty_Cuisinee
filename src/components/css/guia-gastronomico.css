@@ -2,11 +2,10 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Segoe UI', sans-serif;
+  font-family: "Segoe UI", sans-serif;
 }
 
 body {
-  background: white;
   color: #333;
 }
 
@@ -37,32 +36,31 @@ nav ul {
 }
 
 .menu li a:hover {
-  color: rgb(216, 113, 65);
+  color: #bda44c;
 }
 
 .menu li a.active {
-  color: rgb(216, 113, 65);
+  color: #bda44c;
 }
 
 main {
   padding: 40px 20px;
   text-align: center;
-  padding-top: 120px;
+  margin-top: 120px !important;
 }
 
 /* Seção Chefes */
 .chefes-intro h2 {
   font-size: 2.2rem;
-  color: rgb(216, 113, 65);
+  color: #bda44c;
   margin-bottom: 10px;
-
 }
 
 .chefes-intro p {
   max-width: 600px;
   margin: 0 auto 40px;
   font-size: 1rem;
-  color: #555;
+  color: #8c6420;
 }
 
 .chefes-container {
@@ -77,14 +75,14 @@ main {
 .indique-chefe-form {
   width: 300px;
   text-align: center;
-  background: #ffc787;
+  background: #bda44c;
   padding: 1.5rem;
   border-radius: 16px;
-  box-shadow: 0 4px 16px rgba(0,0,0,0.05);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
 }
 
 .indique-chefe-form h3 {
-  color: rgb(216, 113, 65);
+  color: #8c6420;
   margin-bottom: 1rem;
   font-size: 1.2rem;
 }
@@ -104,20 +102,20 @@ main {
 }
 
 .indique-chefe-form input {
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   color: #333;
 }
 
 .indique-chefe-form button {
-  background: rgb(216, 113, 65);
-  color: #FFFFFF;
+  background: #8c6420;
+  color: #ffffff;
   border: none;
   font-weight: bold;
   transition: all 0.3s ease;
 }
 
 .indique-chefe-form button:hover {
-  background: rgb(255, 144, 92);
+  background: #ca9a47;
   color: #fff;
 }
 
@@ -133,7 +131,7 @@ main {
     flex-direction: column;
     align-items: center;
   }
-  
+
   .indique-chefe-form {
     flex: none;
     width: 100%;
@@ -143,9 +141,9 @@ main {
 }
 
 .chefe-card {
-  background: #FFFFFF;
+  background: #ffffff;
   border-radius: 16px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
   width: 260px;
   padding: 20px;
   text-align: center;
@@ -165,7 +163,7 @@ main {
 }
 
 .chefe-card h3 {
-  color: rgb(216, 113, 65);
+  color: #8c6420;
   font-size: 1.4rem;
   margin-bottom: 10px;
 }
@@ -177,16 +175,14 @@ main {
 }
 
 .chefe-card button {
-  background: #ffc787;
-  color: #333;
+  background: #8c6420;
+  color: #f0e49a;
   border: none;
   padding: 10px 20px;
   border-radius: 24px;
   cursor: pointer;
   font-weight: bold;
 }
-
-
 
 /* Seção Restaurantes */
 .restaurantes-intro {
@@ -196,7 +192,7 @@ main {
 
 .restaurantes-intro h2 {
   font-size: 2.2rem;
-  color: rgb(216, 113, 65);
+  color: #bda44c;
   margin-bottom: 10px;
 }
 
@@ -204,7 +200,7 @@ main {
   max-width: 600px;
   margin: 0 auto;
   font-size: 1rem;
-  color: #555;
+  color: #8c6420;
 }
 
 .restaurantes-container {
@@ -227,7 +223,7 @@ main {
     flex-direction: column;
     align-items: center;
   }
-  
+
   .indique-restaurante-form {
     width: 100%;
     max-width: 400px;
@@ -236,7 +232,7 @@ main {
 }
 
 .restaurante-card {
-  background: #FFFFFF;
+  background: #ffffff;
   padding: 20px;
   border-radius: 16px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -257,7 +253,7 @@ main {
 }
 
 .restaurante-card h2 {
-  color: rgb(216, 113, 65);
+  color: #bda44c;
   margin: 10px 0 8px;
 }
 
@@ -271,14 +267,14 @@ main {
   margin-top: 10px;
   text-decoration: none;
   color: white;
-  background: rgb(216, 113, 65);
+  background: #bda44c;
   padding: 8px 14px;
   border-radius: 10px;
   font-weight: bold;
 }
 
 .restaurante-card a:hover {
-  background: rgb(255, 144, 92);
+  background: #bda44c;
   color: #fff;
 }
 
@@ -286,13 +282,13 @@ main {
   width: 300px;
   text-align: center;
   padding: 1.5rem;
-  background: #ffc787;
+  background: #bda44c;
   border-radius: 16px;
-  box-shadow: 0 4px 16px rgba(0,0,0,0.05);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
 }
 
 .indique-restaurante-form h3 {
-  color: rgb(216, 113, 65);
+  color: #8c6420;
   margin-bottom: 1rem;
   font-size: 1.2rem;
 }
@@ -312,25 +308,25 @@ main {
 }
 
 .indique-restaurante-form input {
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   color: #333;
 }
 
 .indique-restaurante-form button {
-  background: rgb(216, 113, 65);
-  color: #FFFFFF;
+  background: #8c6420;
+  color: #ffffff;
   border: none;
   font-weight: bold;
   transition: all 0.3s ease;
 }
 
 .indique-restaurante-form button:hover {
-  background: rgb(255, 144, 92);
+  background: #cc9f50;
   color: #fff;
 }
 
 footer {
-  background: #ffc787;
+  background: #bda44c;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -340,7 +336,7 @@ footer {
 }
 
 footer h3 {
-  color: rgb(216, 113, 65);
+  color: #bda44c;
 }
 
 .footer-links a {

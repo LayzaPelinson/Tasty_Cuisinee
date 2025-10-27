@@ -17,13 +17,13 @@ main{
 
 .contato-titulo {
   font-size: 2.5rem;
-  color: rgb(216, 113, 65);
+  color: #8C6420;
   margin-bottom: 20px;
 }
 
 .contato-subtitulo {
   font-size: 1.1rem;
-  color: #555;
+  color: #F0E49A;
   margin-bottom: 40px;
   line-height: 1.6;
 }
@@ -54,7 +54,7 @@ main{
   left: 15px;
   top: 50%;
   transform: translateY(-50%);
-  color: rgb(216, 113, 65);
+  color: #8C6420;
   font-size: 1rem;
 }
 
@@ -67,7 +67,7 @@ main{
 .formulario-contato textarea {
   width: 100%;
   padding: 15px 15px 15px 45px;
-  border: 2px solid #ffc787;
+  border: 2px solid #8C6420;
   border-radius: 12px;
   font-size: 1rem;
   background: #FAFAFA;
@@ -77,7 +77,7 @@ main{
 .formulario-contato input:focus,
 .formulario-contato textarea:focus {
   outline: none;
-  border-color: rgb(216, 113, 65);
+  border-color: #8C6420;
   background: #FFFFFF;
   box-shadow: 0 0 0 3px rgba(216, 113, 65, 0.1);
 }
@@ -91,7 +91,7 @@ main{
 .formulario-contato button {
   width: 100%;
   padding: 15px;
-  background: rgb(216, 113, 65);
+  background: #8C6420;
   color: #FFFFFF;
   border: none;
   border-radius: 12px;
@@ -103,7 +103,7 @@ main{
 }
 
 .formulario-contato button:hover {
-  background: rgb(255, 144, 92);
+  background: #d6a043;
   color: #fff;
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(216, 113, 65, 0.3);
