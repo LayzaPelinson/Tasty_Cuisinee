@@ -18,6 +18,7 @@ import Contato from './components/Contato'
 import Sobre from './components/Sobre'
 import VCdastro from './components/Cadastronew.tsx'
 import LoginNew from './components/LoginNew.tsx'
+import ADM from './components/ADM'
 
 const router = createBrowserRouter([
   { path: "/", element: <App/> },
@@ -35,6 +36,7 @@ const router = createBrowserRouter([
   { path: '/cadastronew', element: <VCdastro/>  },
   { path: '/loginnew', element: <LoginNew/> },
   { path: '/sobre', element: <Sobre/> },
+  { path: "/ADM", element: <ADM/> },
   { path: '*', element: <div style={{textAlign: 'center', padding: '2rem'}}><h2>Página não encontrada</h2><a href="/">Voltar ao início</a></div> }
 ])
 
