@@ -8,12 +8,6 @@ const chefes = [
   { id: 'carla-mendes', nome: 'Carla Mendes', descricao: 'Formada na França, traz inovação à culinária funcional e saudável.', img: 'img/chefe3.jpg' }
 ]
 
-const restaurantes = [
-  { nome: 'Flor de Sal', localizacao: 'São Paulo, SP', culinaria: 'Brasileira contemporânea', img: 'https://images.unsplash.com/photo-1555992336-03a23c6e96f3', id: 'flor-de-sal' },
-  { nome: 'Bella Cucina', localizacao: 'Curitiba, PR', culinaria: 'Italiana artesanal', img: 'https://images.unsplash.com/photo-1600891964599-f61ba0e24092', id: 'bella-cucina' },
-  { nome: 'Veg & Vida', localizacao: 'Salvador, BA', culinaria: 'Vegetariana & saudável', img: 'https://images.unsplash.com/photo-1525610553991-2bede1a236e2', id: 'veg-vida' }
-]
-
 export default function GuiaGastronomico() {
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>, tipo: string) => {
     e.preventDefault()
@@ -52,33 +46,7 @@ export default function GuiaGastronomico() {
           </div>
         </section>
 
-        <section className="restaurantes-intro">
-          <h2>Restaurantes Recomendados</h2>
-          <p>Explore os melhores restaurantes indicados pelos nossos chefes e usuários!</p>
-        </section>
-
-        <section className="restaurantes-container">
-          <div className="restaurantes-grid">
-            {restaurantes.map(rest => (
-              <div key={rest.id} className="restaurante-card">
-                <img src={rest.img} alt={`Restaurante ${rest.nome}`} />
-                <h2>{rest.nome}</h2>
-                <p><strong>Localização:</strong> {rest.localizacao}</p>
-                <p><strong>Culinária:</strong> {rest.culinaria}</p>
-                <a href={`/restaurante-detalhes?id=${rest.id}`}>Ver mais</a>
-              </div>
-            ))}
-          </div>
-          
-          <div className="indique-restaurante-form">
-            <h3>Indique um restaurante incrível!</h3>
-            <form onSubmit={e => handleSubmit(e, 'Restaurante sugerido')}>
-              <input type="text" placeholder="Nome do restaurante" required />
-              <input type="text" placeholder="Cidade e Estado" required />
-              <button type="submit">Enviar sugestão</button>
-            </form>
-          </div>
-        </section>
+    
       </main>
       <Footer />
     </div>
